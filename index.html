@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Store - Premium Collection</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>LUXURY STORE</h1>
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Collections</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="nav-icons">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="admin/login.html" class="admin-link">
+                        <i class="fas fa-user-shield"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">The Art of Luxury</h2>
+            <p class="hero-subtitle">Discover Our Exclusive Collection</p>
+            <a href="products.html" class="btn-primary">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Collection</h2>
+            <div class="products-grid" id="featured-products">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="filterCategory('bags')">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Bags</h3>
+                </div>
+                <div class="category-card" onclick="filterCategory('watches')">
+                    <i class="fas fa-clock"></i>
+                    <h3>Watches</h3>
+                </div>
+                <div class="category-card" onclick="filterCategory('shoes')">
+                    <i class="fas fa-shoe-prints"></i>
+                    <h3>Shoes</h3>
+                </div>
+                <div class="category-card" onclick="filterCategory('accessories')">
+                    <i class="fas fa-gem"></i>
+                    <h3>Accessories</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Premium luxury products with WhatsApp ordering convenience.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fab fa-whatsapp"></i> +91 XXXXXXXXXX</p>
+                    <p><i class="fas fa-envelope"></i> info@luxurystore.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">© 2024 Luxury Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

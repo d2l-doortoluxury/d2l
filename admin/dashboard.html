@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+            <nav>
+                <a href="#" class="active" onclick="showSection('products')">
+                    <i class="fas fa-box"></i> Products
+                </a>
+                <a href="#" onclick="showSection('settings')">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+                <a href="../index.html">
+                    <i class="fas fa-home"></i> View Site
+                </a>
+                <a href="#" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Products Section -->
+            <section id="products-section" class="admin-section">
+                <div class="section-header">
+                    <h1>Manage Products</h1>
+                    <button class="btn-add" onclick="openProductModal()">
+                        <i class="fas fa-plus"></i> Add Product
+                    </button>
+                </div>
+                <div class="products-table">
+                    <table id="products-table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="products-list">
+                            <!-- Products will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings-section" class="admin-section" style="display:none;">
+                <h1>Website Settings</h1>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label>Store Name</label>
+                        <input type="text" id="store-name" value="LUXURY STORE">
+                    </div>
+                    <div class="form-group">
+                        <label>WhatsApp Number</label>
+                        <input type="text" id="whatsapp-number" value="+91XXXXXXXXXX">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="store-email" value="info@luxurystore.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Currency Symbol</label>
+                        <input type="text" id="currency" value="₹">
+                    </div>
+                    <button class="btn-save" onclick="saveSettings()">Save Settings</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <h2 id="modal-title">Add New Product</h2>
+            <form id="product-form">
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input type="text" id="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="product-category" required>
+                        <option value="bags">Bags</option>
+                        <option value="watches">Watches</option>
+                        <option value="shoes">Shoes</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Price (₹)</label>
+                    <input type="number" id="product-price" required>
+                </div>
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="text" id="product-image" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="product-description" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-save">Save Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
